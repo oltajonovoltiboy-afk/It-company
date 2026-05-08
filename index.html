@@ -1,0 +1,1468 @@
+<!doctype html>
+<html lang="uz">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Innovative IT Solutions - Bold, Futuristic IT Services"
+        />
+        <title>Innovative IT Solutions</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Animated Background -->
+        <div class="bg-animated"></div>
+
+        <!-- Particle Canvas -->
+        <canvas id="particles-canvas"></canvas>
+
+        <!-- PRELOADER -->
+        <div id="preloader">
+            <div class="preloader-logo"></div>
+            <div class="preloader-text">INNOVATIVE IT</div>
+            <div class="preloader-progress">
+                <div class="preloader-progress-bar" id="preloaderBar"></div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION -->
+        <nav class="nav-container" id="navbar">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <a
+                    href="#home"
+                    class="font-display text-2xl font-bold rgb-text-bold"
+                    >InnovativeIT</a
+                >
+                <!-- Hamburger menu icon for mobile -->
+                <button
+                    id="mobile-menu-button"
+                    class="md:hidden p-2 rounded-md text-fg-bright focus:outline-none focus:ring-2 focus:ring-cyan-bright"
+                >
+                    <svg
+                        id="hamburger-icon"
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        ></path>
+                    </svg>
+                    <svg
+                        id="close-icon"
+                        class="w-6 h-6 hidden"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                    </svg>
+                </button>
+                <div
+                    id="nav-links"
+                    class="md:flex flex-col md:flex-row items-center gap-1 absolute md:static top-full left-0 right-0 bg-bg-dark md:bg-transparent p-4 md:p-0 border-t md:border-t-0 border-border-bold md:border-none"
+                >
+                    <a href="#home" class="nav-link active">Bosh sahifa</a>
+                    <a href="#about" class="nav-link">Biz haqimizda</a>
+                    <a href="#services" class="nav-link">Xizmatlar</a>
+                    <a href="#portfolio" class="nav-link">Loyihalar</a>
+                    <a href="#team" class="nav-link">Jamoa</a>
+                    <a href="#pricing" class="nav-link">Narxlar</a>
+                    <a href="#contact" class="nav-link">Aloqa</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg-animation"></div>
+            <div class="hero-shapes">
+                <div class="floating-shape"></div>
+                <div class="floating-shape"></div>
+                <div class="floating-shape"></div>
+            </div>
+            <div class="hero-particles" id="particles"></div>
+            <div class="hero-meteors" id="meteors"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <polygon
+                            points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                        ></polygon>
+                    </svg>
+                    O'zgartiruv ochilmoqda
+                </div>
+                <h1 class="hero-title font-display">
+                    Kelajak uchun<br />
+                    <span class="rgb-text-bold">QATTiq IT Yechimlar</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Sifatli IT xizmatlari va innovatsion yechimlar orqali
+                    biznesingizni kelajakka ko'chirish. Texnologik taraqqiyot
+                    bilan birga, muvaffaqiyatingiz bizning maqsadimiz.
+                </p>
+                <div class="hero-buttons">
+                    <button
+                        class="btn-bold-primary"
+                        onclick="
+                            document
+                                .getElementById('contact')
+                                .scrollIntoView({ behavior: 'smooth' })
+                        "
+                    >
+                        <span>Boshlash</span>
+                    </button>
+                    <button
+                        class="btn-bold-secondary"
+                        onclick="
+                            document
+                                .getElementById('contact')
+                                .scrollIntoView({ behavior: 'smooth' })
+                        "
+                    >
+                        <span>Bog'lanish</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="150">0</div>
+                        <div class="stat-label">Loyihalar</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Mutaxasislar</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-label">Mijozlar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Pastga</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section" id="about">
+            <div class="section-header fade-in">
+                <span class="section-label">/ BIZ HAQIMIZDA</span>
+                <h2 class="section-title font-display">
+                    Innovatsion yechimlar bilan kelajakni bugundan boshlash
+                </h2>
+                <p class="section-description">
+                    2018-yildan buyon IT sanoatida faoliyat ko'rsatib, 150+
+                    loyihani muvaffaqiyatli amalga oshirganmiz. Bizning
+                    maqsadimiz - texnologiyalar orqali inson hayotini
+                    osonlashtirish va bizneslarni rivojlantirish.
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image fade-in slide-in-left">
+                    <div
+                        style="
+                            position: absolute;
+                            inset: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        "
+                    >
+                        <svg
+                            width="250"
+                            height="180"
+                            viewBox="0 0 250 180"
+                            fill="none"
+                        >
+                            <rect
+                                x="20"
+                                y="20"
+                                width="210"
+                                height="140"
+                                rx="15"
+                                stroke="rgba(0,229,255,0.3)"
+                                stroke-width="2"
+                            />
+                            <circle
+                                cx="60"
+                                cy="90"
+                                r="25"
+                                fill="rgba(0,229,255,0.2)"
+                            />
+                            <circle
+                                cx="125"
+                                cy="90"
+                                r="25"
+                                fill="rgba(168,85,247,0.2)"
+                            />
+                            <circle
+                                cx="190"
+                                cy="90"
+                                r="25"
+                                fill="rgba(255,0,170,0.2)"
+                            />
+                            <line
+                                x1="85"
+                                y1="90"
+                                x2="100"
+                                y2="90"
+                                stroke="rgba(0,229,255,0.5)"
+                                stroke-width="2"
+                            />
+                            <line
+                                x1="150"
+                                y1="90"
+                                x2="165"
+                                y2="90"
+                                stroke="rgba(168,85,247,0.5)"
+                                stroke-width="2"
+                            />
+                            <text
+                                x="125"
+                                y="160"
+                                text-anchor="middle"
+                                fill="rgba(255,255,255,0.6)"
+                                font-size="12"
+                                font-family="monospace"
+                            >
+                                INNOVATIVE IT SOLUTIONS
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="fade-in slide-in-right">
+                    <h3 class="font-display text-3xl font-bold mb-6">
+                        Bizning vazifamiz
+                    </h3>
+                    <p class="text-gray-400 mb-8 leading-relaxed text-lg">
+                        Har bir loyihani o'zimizning oilaviy biznesimiz sifatida
+                        ko'rib chiqamiz. Sifat, ishonch va innovatsion yondashuv
+                        - bu bizning asosiy qoidalarimiz. O'zbekiston va xalqaro
+                        bozorlarda sifatli IT yechimlar taqdim etish orqali
+                        bizneslarning rivojlanishiga hissa qo'shamiz.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-value" data-target="150">0</div>
+                            <div class="stat-text">Tugallangan loyihalar</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" data-target="5">0</div>
+                            <div class="stat-text">Yillik tajriba</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" data-target="98">0</div>
+                            <div class="stat-text">Mijozlar qoniqish foizi</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" data-target="50">0</div>
+                            <div class="stat-text">O'z ishimizda mutaxasis</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" data-target="24">0</div>
+                            <div class="stat-text">
+                                Soatlik qo'llab-quvvatlash
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" data-target="1000">0</div>
+                            <div class="stat-text">Soatlik kod yozish</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="section services-section" id="services">
+            <div class="section-header fade-in">
+                <span class="section-label">/ XIZMATLARIMIZ</span>
+                <h2 class="section-title font-display">
+                    To'liq IT xizmatlar yechimlari
+                </h2>
+                <p class="section-description">
+                    Har qanday darajadagi IT muammolaringizni yechamiz. Sizning
+                    biznesingiz uchun eng mos, zamonaviy va sifatli yechimni
+                    topamiz.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#00e5ff"
+                            stroke-width="1.5"
+                        >
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Veb-sayt dasturlash</h3>
+                    <p class="service-description">
+                        Zamonaviy, responsiv va tez ishlaydigan veb-saytlar.
+                        React, Vue, Next.js va boshqa zamonaviy texnologiyalar
+                        bilan. Loyiha ishlab chiqish davomida testlash,
+                        optimallashtirish va SEO ta'minlanadi.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#a855f7"
+                            stroke-width="1.5"
+                        >
+                            <rect
+                                x="5"
+                                y="2"
+                                width="14"
+                                height="20"
+                                rx="2"
+                                ry="2"
+                            ></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Mobil ilovalar</h3>
+                    <p class="service-description">
+                        iOS va Android platformalariga mos mobil ilovalar.
+                        Flutter va React Native bilan tezkor va sifatli
+                        dasturlash. Foydalanuvchi tajribasini o'z ichiga olgan
+                        intuitiv interfeyslar.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#ff00aa"
+                            stroke-width="1.5"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">UI/UX dizayn</h3>
+                    <p class="service-description">
+                        Foydalanuvchilar uchun intuitiv va chiroyli
+                        interfeyslar. Foydalanuvchi tajribasini maksimal
+                        darajada oshirish, oson foydalanish va ko'nikarli
+                        dizayn.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#00e5ff"
+                            stroke-width="1.5"
+                        >
+                            <path
+                                d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                            ></path>
+                            <path d="M9 12l2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Kiberxavfsizlik</h3>
+                    <p class="service-description">
+                        Sizning ma'lumotlaringiz va tizimlaringiz uchun eng
+                        zamonaviy himoyalash yo'llari. Pen-test, xavfsizlik
+                        auditlari va 24/7 monitoring xizmatlari.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#a855f7"
+                            stroke-width="1.5"
+                        >
+                            <path
+                                d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"
+                            ></path>
+                            <polyline points="16 16 12 12 8 16"></polyline>
+                            <line x1="12" y1="12" x2="12" y2="16"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Bulut yechimlari</h3>
+                    <p class="service-description">
+                        AWS, Azure va Google Cloud platformalarida xavfsiz va
+                        moslashuvchan bulut infrastruktura. Ma'lumotlarni
+                        saqlash, qayta ishlash va xavfsizlik ta'minlash.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#ff00aa"
+                            stroke-width="1.5"
+                        >
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                            ></path>
+                            <polyline
+                                points="3.27 6.96 12 12.01 20.73 6.96"
+                            ></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Mashinaviy o'rganish</h3>
+                    <p class="service-description">
+                        AI va ML asosida smart yechimlar. Ma'lumotlarni tahlil
+                        qilish, bashorat qilish va avtomatiklashtirish
+                        tizimlari.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section class="section" id="portfolio">
+            <div class="section-header fade-in">
+                <span class="section-label">/ LOYIHALARIMIZ</span>
+                <h2 class="section-title font-display">
+                    Amalga oshirgan loyihalar
+                </h2>
+                <p class="section-description">
+                    Har bir loyihada yangi tajribalar, innovatsion yechimlar va
+                    eng yaxshi natijalar. Bizning portfolyodan ko'proq namunalar
+                    bilan tanishing.
+                </p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <svg
+                            width="120"
+                            height="80"
+                            viewBox="0 0 120 80"
+                            fill="none"
+                        >
+                            <rect
+                                x="15"
+                                y="15"
+                                width="90"
+                                height="50"
+                                rx="8"
+                                stroke="rgba(0,229,255,0.3)"
+                                stroke-width="2"
+                            />
+                            <rect
+                                x="25"
+                                y="25"
+                                width="70"
+                                height="8"
+                                rx="4"
+                                fill="rgba(0,229,255,0.2)"
+                            />
+                            <rect
+                                x="25"
+                                y="40"
+                                width="45"
+                                height="8"
+                                rx="4"
+                                fill="rgba(168,85,247,0.2)"
+                            />
+                            <rect
+                                x="25"
+                                y="55"
+                                width="35"
+                                height="8"
+                                rx="4"
+                                fill="rgba(255,0,170,0.2)"
+                            />
+                        </svg>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">E-commerce Platform</h3>
+                        <span class="portfolio-category">Veb dasturlash</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <svg
+                            width="120"
+                            height="80"
+                            viewBox="0 0 120 80"
+                            fill="none"
+                        >
+                            <rect
+                                x="20"
+                                y="10"
+                                width="80"
+                                height="60"
+                                rx="12"
+                                stroke="rgba(168,85,247,0.3)"
+                                stroke-width="2"
+                            />
+                            <circle
+                                cx="60"
+                                cy="50"
+                                r="10"
+                                fill="rgba(168,85,247,0.3)"
+                            />
+                            <rect
+                                x="30"
+                                y="20"
+                                width="60"
+                                height="8"
+                                rx="4"
+                                fill="rgba(0,229,255,0.2)"
+                            />
+                        </svg>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">TaskFlow Mobile App</h3>
+                        <span class="portfolio-category">Mobil ilova</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <svg
+                            width="120"
+                            height="80"
+                            viewBox="0 0 120 80"
+                            fill="none"
+                        >
+                            <rect
+                                x="15"
+                                y="10"
+                                width="90"
+                                height="60"
+                                rx="8"
+                                stroke="rgba(255,0,170,0.3)"
+                                stroke-width="2"
+                            />
+                            <circle
+                                cx="35"
+                                cy="40"
+                                r="18"
+                                fill="rgba(255,0,170,0.2)"
+                            />
+                            <circle
+                                cx="65"
+                                cy="40"
+                                r="18"
+                                fill="rgba(0,229,255,0.2)"
+                            />
+                            <circle
+                                cx="95"
+                                cy="40"
+                                r="18"
+                                fill="rgba(168,85,247,0.2)"
+                            />
+                        </svg>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Design System</h3>
+                        <span class="portfolio-category">UI/UX dizayn</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <svg
+                            width="120"
+                            height="80"
+                            viewBox="0 0 120 80"
+                            fill="none"
+                        >
+                            <rect
+                                x="10"
+                                y="10"
+                                width="100"
+                                height="60"
+                                rx="8"
+                                stroke="rgba(255,107,0,0.3)"
+                                stroke-width="2"
+                            />
+                            <rect
+                                x="20"
+                                y="20"
+                                width="30"
+                                height="40"
+                                rx="4"
+                                fill="rgba(255,107,0,0.2)"
+                            />
+                            <rect
+                                x="60"
+                                y="20"
+                                width="30"
+                                height="40"
+                                rx="4"
+                                fill="rgba(0,229,255,0.2)"
+                            />
+                        </svg>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Banking System</h3>
+                        <span class="portfolio-category">Kiberxavfsizlik</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <svg
+                            width="120"
+                            height="80"
+                            viewBox="0 0 120 80"
+                            fill="none"
+                        >
+                            <rect
+                                x="15"
+                                y="15"
+                                width="90"
+                                height="50"
+                                rx="8"
+                                stroke="rgba(0,229,255,0.3)"
+                                stroke-width="2"
+                            />
+                            <rect
+                                x="25"
+                                y="25"
+                                width="70"
+                                height="8"
+                                rx="4"
+                                fill="rgba(0,229,255,0.2)"
+                            />
+                            <rect
+                                x="25"
+                                y="40"
+                                width="45"
+                                height="8"
+                                rx="4"
+                                fill="rgba(168,85,247,0.2)"
+                            />
+                            <rect
+                                x="25"
+                                y="55"
+                                width="35"
+                                height="8"
+                                rx="4"
+                                fill="rgba(255,0,170,0.2)"
+                            />
+                        </svg>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">UzMarket Platform</h3>
+                        <span class="portfolio-category">Veb dasturlash</span>
+                    </div>
+                </div>
+                <div class="portfolio-card fade-in">
+                    <div class="portfolio-image">
+                        <svg
+                            width="120"
+                            height="80"
+                            viewBox="0 0 120 80"
+                            fill="none"
+                        >
+                            <rect
+                                x="20"
+                                y="10"
+                                width="80"
+                                height="60"
+                                rx="12"
+                                stroke="rgba(168,85,247,0.3)"
+                                stroke-width="2"
+                            />
+                            <circle
+                                cx="60"
+                                cy="50"
+                                r="10"
+                                fill="rgba(168,85,247,0.3)"
+                            />
+                            <rect
+                                x="30"
+                                y="20"
+                                width="60"
+                                height="8"
+                                rx="4"
+                                fill="rgba(0,229,255,0.2)"
+                            />
+                            <rect
+                                x="30"
+                                y="35"
+                                width="40"
+                                height="8"
+                                rx="4"
+                                fill="rgba(255,0,170,0.2)"
+                            />
+                        </svg>
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Click.uz App</h3>
+                        <span class="portfolio-category">Mobil ilova</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section class="section team-section" id="team">
+            <div class="section-header fade-in">
+                <span class="section-label">/ JAMOAMIZ</span>
+                <h2 class="section-title font-display">
+                    Yuksak mutaxasislar jamoasi
+                </h2>
+                <p class="section-description">
+                    Har bir a'zosi o'z sohasida yuqori darajada mutaxasis,
+                    tajribali va yaratuvchilar jamoasi. Birgalikda eng yaxshi
+                    natijalarni ko'rsatamiz.
+                </p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card fade-in">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <svg
+                                    width="100"
+                                    height="100"
+                                    viewBox="0 0 100 100"
+                                    fill="none"
+                                >
+                                    <circle
+                                        cx="50"
+                                        cy="35"
+                                        r="20"
+                                        fill="rgba(0,229,255,0.3)"
+                                    />
+                                    <rect
+                                        x="20"
+                                        y="65"
+                                        width="60"
+                                        height="25"
+                                        rx="12"
+                                        fill="rgba(0,229,255,0.2)"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-name">Alex Johnson</h3>
+                            <p class="team-role">Asosiy Texnolog</p>
+                            <p class="team-bio">
+                                10+ yillik tajribaga ega full-stack dasturchi.
+                                Yangi texnologiyalarni o'rganishga va qo'llashga
+                                e'tiborli.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <svg
+                                    width="100"
+                                    height="100"
+                                    viewBox="0 0 100 100"
+                                    fill="none"
+                                >
+                                    <circle
+                                        cx="50"
+                                        cy="35"
+                                        r="20"
+                                        fill="rgba(168,85,247,0.3)"
+                                    />
+                                    <rect
+                                        x="20"
+                                        y="65"
+                                        width="60"
+                                        height="25"
+                                        rx="12"
+                                        fill="rgba(168,85,247,0.2)"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-name">Sarah Williams</h3>
+                            <p class="team-role">Bosh UX/UI Dizayner</p>
+                            <p class="team-bio">
+                                Foydalanuvchi tajribasini oshirish va chiroyli
+                                interfeyslar yaratish bo'yicha professional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <svg
+                                    width="100"
+                                    height="100"
+                                    viewBox="0 0 100 100"
+                                    fill="none"
+                                >
+                                    <circle
+                                        cx="50"
+                                        cy="35"
+                                        r="20"
+                                        fill="rgba(255,0,170,0.3)"
+                                    />
+                                    <rect
+                                        x="20"
+                                        y="65"
+                                        width="60"
+                                        height="25"
+                                        rx="12"
+                                        fill="rgba(255,0,170,0.2)"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-name">Michael Chen</h3>
+                            <p class="team-role">Kiberxavfsizlik Mutaxasisi</p>
+                            <p class="team-bio">
+                                Tarmoqlar va ma'lumotlarni himoya qilish,
+                                xavfsizlik auditlari va penetratsiya testlari.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <svg
+                                    width="100"
+                                    height="100"
+                                    viewBox="0 0 100 100"
+                                    fill="none"
+                                >
+                                    <circle
+                                        cx="50"
+                                        cy="35"
+                                        r="20"
+                                        fill="rgba(255,107,0,0.3)"
+                                    />
+                                    <rect
+                                        x="20"
+                                        y="65"
+                                        width="60"
+                                        height="25"
+                                        rx="12"
+                                        fill="rgba(255,107,0,0.2)"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-name">Umid Karimov</h3>
+                            <p class="team-role">Backend Dasturchi</p>
+                            <p class="team-bio">
+                                Node.js va Python asosida kuchli backend
+                                tizimlar yaratishda 8 yillik tajriba.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <svg
+                                    width="100"
+                                    height="100"
+                                    viewBox="0 0 100 100"
+                                    fill="none"
+                                >
+                                    <circle
+                                        cx="50"
+                                        cy="35"
+                                        r="20"
+                                        fill="rgba(0,229,255,0.3)"
+                                    />
+                                    <rect
+                                        x="20"
+                                        y="65"
+                                        width="60"
+                                        height="25"
+                                        rx="12"
+                                        fill="rgba(0,229,255,0.2)"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-name">Sardor Raximov</h3>
+                            <p class="team-role">Frontend Dasturchi</p>
+                            <p class="team-bio">
+                                React va Vue.js bilan yaratilgan zamonaviy veb
+                                ilovalarda 6 yillik tajriba.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-card-inner">
+                        <div class="team-card-front">
+                            <div class="team-avatar">
+                                <svg
+                                    width="100"
+                                    height="100"
+                                    viewBox="0 0 100 100"
+                                    fill="none"
+                                >
+                                    <circle
+                                        cx="50"
+                                        cy="35"
+                                        r="20"
+                                        fill="rgba(168,85,247,0.3)"
+                                    />
+                                    <rect
+                                        x="20"
+                                        y="65"
+                                        width="60"
+                                        height="25"
+                                        rx="12"
+                                        fill="rgba(168,85,247,0.2)"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="team-card-back">
+                            <h3 class="team-name">Dilnoza Saidova</h3>
+                            <p class="team-role">Project Manager</p>
+                            <p class="team-bio">
+                                Loyihalarni muddatidan oldin tugatish va sifatli
+                                topshiriq bajarishda 7 yillik tajriba.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="section">
+            <div class="section-header fade-in">
+                <span class="section-label">/ FIKRLAR</span>
+                <h2 class="section-title font-display">
+                    Mijozlarimizning fikri
+                </h2>
+                <p class="section-description">
+                    Biz bilan hamkorlik qilgan kompaniyalar va mijozlarimiz
+                    bizning ishimiz haqida. Umid qilamizki, ularning fikrlari
+                    sizni ham motivalatsiya qiladi.
+                </p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonials-slider" id="testimonialsSlider">
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "Innovative IT Solutions jamoasi bizning e-commerce
+                            platformamizni ajoyib qilib amalga oshirdi. Loyihani
+                            muddatidan oldin tugatib, sifat esa ko'proq
+                            kutilayotgandan yuqori bo'ldi."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JS</div>
+                            <div>
+                                <div class="author-name">John Smith</div>
+                                <div class="author-company">TechCorp CEO</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "Mobil ilovalarini ishlab chiqishda jamoa juda
+                            professional ishladi. UX dizayni aqlga sodiq,
+                            vaqtida yetib borganmiz. Albatta tavsiya qilaman."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">ED</div>
+                            <div>
+                                <div class="author-name">Emily Davis</div>
+                                <div class="author-company">
+                                    StartupHub Direktori
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "Kiberxavfsizlik auditidan keyin tizimlarimiz juda
+                            darhol himoyalandi. Jamoa o'z vaqtida, sifatli va
+                            ishonchli."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RW</div>
+                            <div>
+                                <div class="author-name">Robert Wilson</div>
+                                <div class="author-company">
+                                    FinancePlus CTO
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "Loyiha muddatidan oldin yakunlandi. Jamoa o'z
+                            vaqtida ishladi, xatoliklar yo'q edi. Professional
+                            jamoa!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AK</div>
+                            <div>
+                                <div class="author-name">Abdul Karimov</div>
+                                <div class="author-company">
+                                    Alfa Bank O'zbekiston
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "UzAuto Motors uchun ishlab chiqilgan dasturimiz
+                            juda qulay ishlayapti. Jamoa o'z vaqtida topshirdi."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">UZ</div>
+                            <div>
+                                <div class="author-name">Zafar Usmanov</div>
+                                <div class="author-company">UzAuto Motors</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-content">
+                            "Kelinga qurilgan veb-sayt orqali sotuvlarimiz 40%
+                            ga oshdi. Ajoyib jamoa!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SA</div>
+                            <div>
+                                <div class="author-name">Sardor Akramov</div>
+                                <div class="author-company">Kelinga Market</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-index="0"></div>
+                    <div class="testimonial-dot" data-index="1"></div>
+                    <div class="testimonial-dot" data-index="2"></div>
+                    <div class="testimonial-dot" data-index="3"></div>
+                    <div class="testimonial-dot" data-index="4"></div>
+                    <div class="testimonial-dot" data-index="5"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section class="section pricing-section" id="pricing">
+            <div class="section-header fade-in">
+                <span class="section-label">/ NARXLAR</span>
+                <h2 class="section-title font-display">
+                    O'zingizga mos tariflar
+                </h2>
+                <p class="section-description">
+                    Har qanday daromadingiz va loyihingiz hajmi uchun
+                    moslashuvchan va qulay tarif rejalar. Barcha paketlarda
+                    sifat kafolati mavjud.
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <h3 class="pricing-name">Standart</h3>
+                    <div class="pricing-price">$999<span>/oy</span></div>
+                    <p class="text-gray-400 mb-4">Kichik bizneslar uchun</p>
+                    <ul class="pricing-features">
+                        <li>Veb-sayt dasturlash (10 ta sahifa)</li>
+                        <li>Asosiy xavfsizlik tizimi</li>
+                        <li>Mijozlar uchun boshqaruv paneli</li>
+                        <li>To'liq qo'llab-quvvatlash</li>
+                        <li>1 oy garantiya</li>
+                    </ul>
+                    <button class="btn-bold-secondary w-full mt-4">
+                        Tanlash
+                    </button>
+                </div>
+                <div class="pricing-card featured fade-in">
+                    <div class="pricing-badge">ENG O'ZINI TANLANG</div>
+                    <h3 class="pricing-name">Professional</h3>
+                    <div class="pricing-price">$2,499<span>/oy</span></div>
+                    <p class="text-gray-400 mb-4">O'rtacha bizneslar uchun</p>
+                    <ul class="pricing-features">
+                        <li>Barcha Standart xizmatlar</li>
+                        <li>Mobil ilova (1 ta platforma)</li>
+                        <li>Katta xavfsizlik tizimi</li>
+                        <li>Cheksiz sahifa va funksional</li>
+                        <li>SEO optimizatsiya xizmati</li>
+                        <li>24/7 maxsus qo'llab-quvvatlash</li>
+                    </ul>
+                    <button class="btn-bold-primary w-full mt-4">
+                        <span>Tanlash</span>
+                    </button>
+                </div>
+                <div class="pricing-card fade-in">
+                    <h3 class="pricing-name">Enterprise</h3>
+                    <div class="pricing-price">$4,999<span>/oy</span></div>
+                    <p class="text-gray-400 mb-4">Katta kompaniyalar uchun</p>
+                    <ul class="pricing-features">
+                        <li>Barcha Professional xizmatlar</li>
+                        <li>Mobil ilovalar (3 ta platforma)</li>
+                        <li>Premium xavfsizlik darajasi</li>
+                        <li>Bulut integratsiyasi xizmati</li>
+                        <li>Maxsus loyiha menedjeri</li>
+                        <li>VIP qo'llab-quvvatlash</li>
+                    </ul>
+                    <button class="btn-bold-secondary w-full mt-4">
+                        Tanlash
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section" id="contact">
+            <div class="section-header fade-in">
+                <span class="section-label">/ ALOQA</span>
+                <h2 class="section-title font-display">Biz bilan bog'lanish</h2>
+                <p class="section-description">
+                    Loyihingiz haqida gapirish, savol bormi yoki hamkorlik
+                    taklif bermoqchimisiz? 24/7 soat davomida javob olasiz.
+                    Hoziroq bog'laning!
+                </p>
+            </div>
+            <div class="contact-container">
+                <form class="contact-form fade-in slide-in-left">
+                    <div class="form-group">
+                        <input
+                            type="text"
+                            class="form-input"
+                            id="name"
+                            placeholder=" "
+                            required
+                        />
+                        <label class="form-label" for="name"
+                            >Ismingiz va familiyangiz</label
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input
+                            type="email"
+                            class="form-input"
+                            id="email"
+                            placeholder=" "
+                            required
+                        />
+                        <label class="form-label" for="email"
+                            >Elektron pochta manzilingiz</label
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input
+                            type="tel"
+                            class="form-input"
+                            id="phone"
+                            placeholder=" "
+                        />
+                        <label class="form-label" for="phone"
+                            >Telefon raqamingiz</label
+                        >
+                    </div>
+                    <div class="form-group">
+                        <textarea
+                            class="form-input form-textarea"
+                            id="message"
+                            placeholder=" "
+                            required
+                        ></textarea>
+                        <label class="form-label" for="message"
+                            >Xabaringiz yoki loyihingiz haqida</label
+                        >
+                    </div>
+                    <button type="submit" class="btn-bold-primary w-full">
+                        <span>Xabar yuborish</span>
+                    </button>
+                </form>
+                <div class="contact-info fade-in slide-in-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                ></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Manzil:</strong>
+                            Toshkent shahri, Chilonzor tumani, IT park, Yangi
+                            salohiyat ko'chasi 15-uy
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Telefon:</strong>
+                            +998 90 123 45 67<br />
+                            +998 90 123 45 68<br />
+                            +998 90 123 45 69
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                ></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Email:</strong>
+                            info@innovativeit.uz<br />
+                            support@innovativeit.uz<br />
+                            sales@innovativeit.uz
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                ></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <strong>Ish vaqt:</strong>
+                            Dushanba-Juma: 09:00 - 18:00<br />
+                            Yakshanba: Dam olish kuni
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="map-grid"></div>
+                            <div class="map-marker"></div>
+                            <svg
+                                width="50"
+                                height="50"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="white"
+                                stroke-width="2"
+                                style="
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                "
+                            >
+                                <path
+                                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                                ></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo rgb-text-bold">InnovativeIT</div>
+                    <p class="footer-description">
+                        Zamonaviy IT xizmatlar va innovatsion yechimlar orqali
+                        biznesingizni kelajakga ko'chirish. O'zbekiston va
+                        xalqaro bozorlarda sifatli IT yechimlar taqdim etamiz.
+                    </p>
+
+                    <!-- SOCIAL ICONS - To'g'rilangan -->
+                    <div class="social-links">
+                        <a
+                            href="https://facebook.com/27otajonov"
+                            target="_blank"
+                            class="social-link"
+                            aria-label="Facebook"
+                        >
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                                />
+                            </svg>
+                        </a>
+                        <a
+                            href="https://twitter.com/27_otajonov"
+                            target="_blank"
+                            class="social-link"
+                            aria-label="Twitter"
+                        >
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                                />
+                            </svg>
+                        </a>
+                        <a
+                            href="https://linkedin.com/in/27otajonov"
+                            target="_blank"
+                            class="social-link"
+                            aria-label="LinkedIn"
+                        >
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                                />
+                                <rect x="2" y="9" width="4" height="12" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+                        <a
+                            href="https://instagram.com/27_otajonov"
+                            target="_blank"
+                            class="social-link"
+                            aria-label="Instagram"
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <rect
+                                    x="2"
+                                    y="2"
+                                    width="20"
+                                    height="20"
+                                    rx="5"
+                                    ry="5"
+                                />
+                                <path
+                                    d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                                />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Xizmatlar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Veb saytlar</a></li>
+                        <li><a href="#services">Mobil ilovalar</a></li>
+                        <li><a href="#services">UI/UX dizayn</a></li>
+                        <li><a href="#services">Kiberxavfsizlik</a></li>
+                        <li><a href="#services">Bulut xizmatlari</a></li>
+                        <li><a href="#services">AI yechimlari</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Kompaniya</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Biz haqimizda</a></li>
+                        <li><a href="#team">Jamoa</a></li>
+                        <li><a href="#portfolio">Loyihalar</a></li>
+                        <li><a href="#pricing">Narxlar</a></li>
+                        <li><a href="#contact">Aloqa</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Qo'llab-quvvatlash</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Yordam</a></li>
+                        <li><a href="#">Maxfiylik</a></li>
+                        <li><a href="#">Shartnoma</a></li>
+                        <li><a href="#">Kafolat</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © 2026 Innovative IT Solutions. Barcha huquqlar
+                    himoyalangan.
+                </p>
+                <p>
+                    Dizayn va ishlab chiqarish: Innovative IT Solutions -
+                    O'zbekiston
+                </p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
