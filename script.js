@@ -138,6 +138,7 @@ const navLinksElements = document.querySelectorAll(".nav-link"); // Navigatsiya 
 
 window.addEventListener("scroll", () => {
     if (window.pageYOffset > 50) {
+    const scrollY = window.scrollY || window.pageYOffset;
     if (!navbar) return;
     const scrollY = window.scrollY || window.pageYOffset;
     if (scrollY > 50) {
